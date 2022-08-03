@@ -544,6 +544,7 @@ GameObject:
   - component: {fileID: 1338812266}
   - component: {fileID: 1338812265}
   - component: {fileID: 1338812264}
+  - component: {fileID: 1338812268}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -889,8 +890,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 332395611839661559, guid: 34da54648b763be4a9af5e3962fe58bd,
-    type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -1053,6 +1053,21 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1338812268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338812262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52de10c6c903c5d4aa66544bc0bff5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHandPrefab: {fileID: 332395611839895959, guid: 34da54648b763be4a9af5e3962fe58bd,
+    type: 3}
+  playerControllerCharacteristics: 576
 --- !u!1 &1680906810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,6 +1431,7 @@ GameObject:
   - component: {fileID: 2132028952}
   - component: {fileID: 2132028951}
   - component: {fileID: 2132028950}
+  - component: {fileID: 2132028954}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -1761,8 +1777,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 9067802180012344061, guid: 6d87c42f662886f4589d0b7215cb3d1b,
-    type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -1925,6 +1940,21 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &2132028954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132028948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52de10c6c903c5d4aa66544bc0bff5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHandPrefab: {fileID: 9067802180012056285, guid: 6d87c42f662886f4589d0b7215cb3d1b,
+    type: 3}
+  playerControllerCharacteristics: 320
 --- !u!1 &1003502875624872
 GameObject:
   m_ObjectHideFlags: 0
