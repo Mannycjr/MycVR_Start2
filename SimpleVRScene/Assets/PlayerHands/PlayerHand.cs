@@ -8,7 +8,8 @@ public class PlayerHand : MonoBehaviour
     public GameObject playerHandPrefab;
     public InputDeviceCharacteristics playerControllerCharacteristics;
 
-    private InputDevice playerDevice;
+    private InputDevice _playerDevice;
+    private Animator _playerHandAnimator;
     
     // Start is called before the first frame update
     void Start()
@@ -25,9 +26,10 @@ public class PlayerHand : MonoBehaviour
         //If Device identified, Instantiate a Hand
         if (devices.Count > 0)
         {
-            playerDevice = devices[0];
+            _playerDevice = devices[0];
 
             GameObject newHand = Instantiate(playerHandPrefab, transform); // transform = parent's transform position
+            _playerHandAnimator = newHand.GetComponent<Animator>(); // attach animator to new hand
         }
 
     }
@@ -36,7 +38,7 @@ public class PlayerHand : MonoBehaviour
     void Update()
     {
         // Change Animate position or re-initialize
-        if (playerDevice.isValid)
+        if (_playerDevice.isValid)
         {
             UpdatePlayerHand();
         } 
@@ -48,22 +50,22 @@ public class PlayerHand : MonoBehaviour
 
     void UpdatePlayerHand()
     {
-        if (playerDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
+        if (_playerDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
-            Debug.Log("Trigger Value =" + triggerValue);
+            _playerHandAnimator.SetFloat("Trigger", triggerValue);
         }
         else
         {
-            Debug.Log("Trigger not Active");
+            _playerHandAnimator.SetFloat("Trigger", 0);
         }
 
-        if (playerDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
+        if (_playerDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
         {
-            Debug.Log("Grip Value =" + gripValue);
+            _playerHandAnimator.SetFloat("Grip", gripValue);
         }
         else
         {
-            Debug.Log("Grip not Active");
+            _playerHandAnimator.SetFloat("Grip", 0);
         }
 
     }
