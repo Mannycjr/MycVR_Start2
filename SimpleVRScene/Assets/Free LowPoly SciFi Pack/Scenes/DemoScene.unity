@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 189657004}
   - component: {fileID: 189657003}
   - component: {fileID: 189657005}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: XR Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 413726758}
   - component: {fileID: 413726757}
   - component: {fileID: 413726756}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1709,7 +1709,7 @@ GameObject:
   - component: {fileID: 1542226483}
   - component: {fileID: 1542226482}
   - component: {fileID: 1542226485}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2042,6 +2042,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096797749881093665, guid: c7349441bb611af45ad4757004d4542b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7349441bb611af45ad4757004d4542b, type: 3}
@@ -2758,7 +2763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2094518829}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sword_grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
