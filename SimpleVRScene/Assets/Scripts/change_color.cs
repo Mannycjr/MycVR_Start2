@@ -5,7 +5,7 @@ using UnityEngine;
 public class change_color : MonoBehaviour
 {
     public Material HitMaterial;
-
+    //public GameObject coldStream;
     
 
     // Start is called before the first frame update
@@ -26,8 +26,12 @@ public class change_color : MonoBehaviour
     {
         Debug.Log("Hit: "+ other.transform.name + " tag: " + other.tag);
 
-        var renderer = this.GetComponent<Renderer>();
-        renderer.material.SetColor("_Color", Color.blue);
+        if (other.tag == "Sword")
+        {
+            GetComponent<Renderer>().material = HitMaterial;
+            //coldStream.SetActive(true);
+        }
+        
 
     }
 }
