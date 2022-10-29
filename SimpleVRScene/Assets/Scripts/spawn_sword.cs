@@ -10,6 +10,7 @@ public class spawn_sword : MonoBehaviour
     {
         GameObject newSword = Instantiate(swordPrefab);
         newSword.transform.parent = this.transform;
+        newSword.transform.position = this.transform.position;
     }
 
 }
